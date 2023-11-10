@@ -158,3 +158,100 @@ six.each do |hash|
     end
 end
 pp cheapest
+
+# Start with an array of numbers and compute product of all the numbers.
+# For example, [5, 10, 8, 3] becomes 1200.
+
+seven = [5, 10, 8, 3]
+
+#using a loop
+# index = 0
+# product = 1
+# while index < seven.length
+#     product = product * seven[index]
+# index = index + 1
+# end
+# pp product
+
+#using each
+# product = 1
+# seven.each do |num|
+#     product = product * num
+# end
+# pp product
+
+#using reduce
+def product(array)
+    array.reduce(:*)
+end
+pp product(seven)
+
+# Start with an array of strings and combine them all into a single string, separated by dashes.
+# For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
+
+eight = ["volleyball", "basketball", "badminton"]
+
+#using a loop
+# index = 0
+# string = "-"
+# while index < eight.length
+#     string << eight[index] + '-'
+# index = index + 1
+# end
+# pp string
+
+#using each
+# string = "-"
+# eight.each do |word|
+#     string << word + "-"
+# end
+# pp string
+
+# Start with an array of hashes and find the hash with the shortest name (from the :name key).
+# For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
+
+nine = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+
+#using a loop
+# short = nine[0]
+# index = 0
+# while index < nine.length
+#     if nine[index][:name].length < short[:name].length
+#         short = nine[index]
+#     end
+# index = index + 1
+# end
+# pp short
+
+#using each
+short = nine[0]
+nine.each do |hash|
+    if hash[:name].length < short[:name].length
+        short = hash
+    end
+end
+pp short
+
+# Start with an array of numbers and compute the maximum number.
+# For example, [5, 10, 8, 3] becomes 10
+ten = [5, 10, 8, 3]
+
+#using a loop
+# index = 0
+# biggest = ten[0]
+# while index < ten.length
+#     if ten[index] > biggest
+#         biggest = ten[index]
+#     end
+# index = index + 1
+# end
+# pp biggest
+
+#using each
+biggest = ten[0]
+ten.each do |num|
+    if num > biggest
+        biggest = num
+    end
+end
+pp biggest
