@@ -53,3 +53,12 @@ console.log(num9 * num10);
 
 let word10 = "HeLLo";
 console.log(word10.toLowerCase());
+
+// Write a program that uses variables to store a first and last name, then prints the full name in one line using string concatenation (the + operator).
+let firstName = "Morgan";
+let lastName = "Winkler";
+console.log(firstName + " " + lastName);
+
+// Write a program that uses variables to store a first and last name, then prints the full name in one line using string interpolation (the #{} operator).
+
+console.log(`${firstName} ${lastName} `);
